@@ -1,37 +1,56 @@
-// src/App.js
-import React from 'react';
-import { ThemeProvider, CssBaseline, Box } from '@mui/material';
-import theme from '../src/theme/theme';
-import Navbar from '../src/components/Navbar/Navbar';
-import Hero from '../src/components/Hero/Hero';
-import About from '../src/components/About/About';
-import Education from '../src/components/Education/Education';
-import Projects from '../src/components/Projects/projects';
-import Skills from '../src/components/Skills/Skills';
-import Achievements from '../src/components/Achievements/Achievements';
-import Blogs from '../src/components/Blogs/Blogs';
-import Resume from '../src/components/Resume/Resume';
-import Contact from '../src/components/Contact/Contact';
-import Footer from '../src/components/Footer/Footer';
+import React, { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import TechStack from './components/TechStack';
+import Achievements from './components/Achievements';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import { playClick, playWhoosh } from './utils/sounds';
 
 function App() {
+  useEffect(() => {
+    // Unlock audio context for browsers that block auto-play
+    const unlockAudio = () => {
+      playClick(); // Play a dummy click or short sound to unlock
+      window.removeEventListener('click', unlockAudio);
+      window.removeEventListener('scroll', unlockAudio);
+    };
+    
+    window.addEventListener('click', unlockAudio);
+    window.addEventListener('mousedown', unlockAudio);
+    window.addEventListener('touchstart', unlockAudio);
+    window.addEventListener('scroll', unlockAudio);
+
+    return () => {
+      window.removeEventListener('click', unlockAudio);
+      window.removeEventListener('mousedown', unlockAudio);
+      window.removeEventListener('touchstart', unlockAudio);
+      window.removeEventListener('scroll', unlockAudio);
+    };
+  }, []);
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Box sx={{ background: 'linear-gradient(135deg, #050a18 0%, #0a0f2e 50%, #050a18 100%)', minHeight: '100vh' }}>
-        <Navbar />
+    <div className="relative min-h-screen bg-background selection:bg-primary/30 selection:text-white">
+      {/* Background Glows */}
+      <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
+      <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/10 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
+
+      <Navbar />
+      
+      <main>
         <Hero />
         <About />
-        <Education />
-        <Projects />
-        <Skills />
+        <TechStack />
         <Achievements />
-        <Blogs />
-        <Resume />
+        <Projects />
         <Contact />
-        <Footer />
-      </Box>
-    </ThemeProvider>
+      </main>
+
+      <footer className="py-12 px-4 text-center text-white/20 text-xs border-t border-white/5">
+        Designed & Built by Amrish Kumar Tiwary • 2026
+      </footer>
+    </div>
   );
 }
 
