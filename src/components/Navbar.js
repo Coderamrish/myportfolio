@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Home, Trophy, Briefcase, User, Mail, Cpu, Layers, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Home, Briefcase, User, Mail, Layers, Star } from 'lucide-react';
 import { playClick } from '../utils/sounds';
 
 const Navbar = () => {

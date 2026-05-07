@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Phone, MapPin, ExternalLink, ArrowRight } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 const GithubIcon = ({ size = 24 }) => (

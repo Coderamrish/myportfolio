@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Folder, ArrowUpRight, Zap, Code2 } from 'lucide-react';
+import { ArrowUpRight, Code2 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { playClick, playWhoosh } from '../utils/sounds';
 

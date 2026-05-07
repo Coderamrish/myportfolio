@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Server, Cpu, Database, Layout, Settings, Workflow, Zap, Code2, Globe, DatabaseZap } from 'lucide-react';
+import { Server, Cpu, Workflow, DatabaseZap } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { playClick, playWhoosh } from '../utils/sounds';
 

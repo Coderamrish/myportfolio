@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, ExternalLink, ShieldCheck, MapPin, Code2, ChevronDown, Sparkles } from 'lucide-react';
+import { ShieldCheck, MapPin, Sparkles } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { playClick } from '../utils/sounds';
 

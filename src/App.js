@@ -6,7 +6,7 @@ import TechStack from './components/TechStack';
 import Achievements from './components/Achievements';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import { playClick, playWhoosh } from './utils/sounds';
+import { playClick } from './utils/sounds';
 
 function App() {
   useEffect(() => {

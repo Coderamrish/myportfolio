@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, BookOpen, ExternalLink, FileText, Cpu, MapPin, Sparkles, Layout } from 'lucide-react';
+import { GraduationCap, BookOpen, ExternalLink, Sparkles, Layout } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { playClick, playWhoosh } from '../utils/sounds';
 

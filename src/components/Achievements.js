@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Code, Target, ExternalLink, Award, Terminal, Star, Zap } from 'lucide-react';
+import { Trophy, Code, Target, ExternalLink, Award, Star, Zap } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { playClick, playWhoosh } from '../utils/sounds';
 
