@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Activity as ActivityIcon, Calendar, Zap } from 'lucide-react';
+import { Trophy, Activity as ActivityIcon, Calendar, Zap, Layout } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { playClick, playWhoosh } from '../utils/sounds';
 
@@ -12,6 +12,9 @@ const GithubIcon = ({ size = 24 }) => (
 );
 
 const Activity = () => {
+  const gfgUsername = "tiwariamuswm";
+  const githubUsername = "Coderamrish";
+
   return (
     <section id="activity" className="py-32 px-4">
       <div className="max-w-7xl mx-auto">
@@ -41,24 +44,27 @@ const Activity = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">GitHub Activity</h3>
-                <p className="text-white/40 text-sm font-mono tracking-widest">@{portfolioData.socials.github.split('/').pop()}</p>
+                <div className="flex items-center gap-3">
+                   <p className="text-white/40 text-sm font-mono tracking-widest">@{githubUsername}</p>
+                   <img src={`https://komarev.com/ghpvc/?username=${githubUsername}&color=facc15&style=flat-square&label=PROFILE+VIEWS`} alt="Views" className="h-5" />
+                </div>
               </div>
             </div>
 
             <div className="space-y-6">
               {/* Stats Card */}
-              <div className="group relative glass p-1 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20">
+              <div className="group relative glass p-4 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20">
                 <img 
-                  src={`https://github-readme-stats.vercel.app/api?username=Coderamrish&show_icons=true&theme=transparent&title_color=facc15&text_color=ffffff&icon_color=facc15&border_color=ffffff00&hide_border=true&bg_color=00000000`} 
+                  src={`https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&title_color=facc15&text_color=ffffff&icon_color=facc15&bg_color=081a14&hide_border=true&rank_icon=github`} 
                   alt="GitHub Stats"
                   className="w-full h-auto"
                 />
               </div>
 
               {/* Top Langs */}
-              <div className="group relative glass p-1 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20">
+              <div className="group relative glass p-4 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20">
                 <img 
-                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=Coderamrish&layout=compact&theme=transparent&title_color=facc15&text_color=ffffff&icon_color=facc15&border_color=ffffff00&hide_border=true&bg_color=00000000`} 
+                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&title_color=facc15&text_color=ffffff&icon_color=facc15&bg_color=081a14&hide_border=true`} 
                   alt="Top Languages"
                   className="w-full h-auto"
                 />
@@ -66,7 +72,7 @@ const Activity = () => {
             </div>
           </motion.div>
 
-          {/* LeetCode & Coding Section */}
+          {/* LeetCode & GFG Section */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,52 +84,56 @@ const Activity = () => {
                 <Trophy size={28} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">Coding Proficiency</h3>
-                <p className="text-white/40 text-sm font-mono tracking-widest">Knight @ LeetCode</p>
+                <h3 className="text-2xl font-bold text-white">Competitive Programming</h3>
+                <p className="text-white/40 text-sm font-mono tracking-widest">LeetCode & GeeksforGeeks</p>
               </div>
             </div>
 
             <div className="space-y-6">
               {/* LeetCode Card */}
-              <div 
-                onClick={playClick}
-                className="group relative glass p-8 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20 cursor-pointer"
-              >
-                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <ActivityIcon size={120} />
+              <div className="group relative glass p-6 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20">
+                <div className="flex items-center gap-3 mb-4">
+                   <ActivityIcon size={16} className="text-primary" />
+                   <span className="text-[10px] font-black uppercase tracking-widest text-white/40">LeetCode Stats</span>
                 </div>
-                
                 <img 
-                  src="https://leetcard.jacoblin.cool/coderamrish?theme=dark&font=Inter&ext=activity" 
+                  src={`https://leetcard.jacoblin.cool/${githubUsername.toLowerCase()}?theme=dark&font=Inter&ext=activity`} 
                   alt="LeetCode Stats"
                   className="w-full h-auto rounded-2xl"
                 />
               </div>
 
-              {/* Custom Quick Stats Grid */}
-              <div className="grid grid-cols-2 gap-4">
-                 <div className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 flex flex-col gap-2 group hover:border-primary/20 transition-all">
-                    <div className="flex items-center gap-2 text-primary">
-                       <Calendar size={16} />
-                       <span className="text-[10px] font-black uppercase tracking-widest">Streak</span>
-                    </div>
-                    <div className="text-3xl font-bold text-white group-hover:text-primary transition-colors">365+ Days</div>
-                    <p className="text-white/20 text-xs">Continuous commits</p>
-                 </div>
-                 <div className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 flex flex-col gap-2 group hover:border-primary/20 transition-all">
-                    <div className="flex items-center gap-2 text-primary">
-                       <Zap size={16} />
-                       <span className="text-[10px] font-black uppercase tracking-widest">Peak Rating</span>
-                    </div>
-                    <div className="text-3xl font-bold text-white group-hover:text-primary transition-colors">2006</div>
-                    <p className="text-white/20 text-xs">Global Rank 466</p>
-                 </div>
+              {/* GFG Stats */}
+              <div className="group relative glass p-6 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20">
+                <div className="flex items-center gap-3 mb-4">
+                   <Layout size={16} className="text-primary" />
+                   <span className="text-[10px] font-black uppercase tracking-widest text-white/40">GeeksforGeeks Profile</span>
+                </div>
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                   <img 
+                     src={`https://gfg-stats.vercel.app/api?username=${gfgUsername}&theme=dark`} 
+                     alt="GFG Stats"
+                     className="w-full md:w-2/3 h-auto rounded-xl"
+                   />
+                   <div className="flex flex-col gap-4 text-center md:text-left">
+                      <div className="text-primary font-bold text-xl">800+ Solved</div>
+                      <p className="text-white/40 text-xs leading-relaxed">Extensive practice on DSA, Algorithms, and System Design problems.</p>
+                      <a 
+                        href={`https://www.geeksforgeeks.org/profile/${gfgUsername}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[10px] font-black uppercase tracking-widest text-white hover:text-primary transition-colors"
+                      >
+                         View Profile →
+                      </a>
+                   </div>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
 
-        {/* Contribution Graph (Full Width) */}
+        {/* GitHub Streak Graph */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -136,7 +146,7 @@ const Activity = () => {
           </div>
           <div className="overflow-x-auto pb-4">
              <img 
-               src="https://github-readme-streak-stats.herokuapp.com/?user=Coderamrish&theme=transparent&hide_border=true&stroke=facc15&ring=facc15&fire=facc15&currStreakNum=ffffff&sideNums=ffffff&sideLabels=ffffff&dates=94a3b8" 
+               src={`https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=dark&hide_border=true&stroke=facc15&ring=facc15&fire=facc15&currStreakNum=ffffff&sideNums=ffffff&sideLabels=ffffff&dates=94a3b8&background=081a14`} 
                alt="GitHub Streak"
                className="w-full min-w-[600px] h-auto"
              />
