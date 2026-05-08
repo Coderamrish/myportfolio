@@ -14,6 +14,9 @@ const GithubIcon = ({ size = 24 }) => (
 const Activity = () => {
   const gfgUsername = "tiwariamuswm";
   const githubUsername = "Coderamrish";
+  
+  // Using a more stable mirror for github-readme-stats
+  const githubStatsMirror = "https://github-readme-stats-eight-theta.vercel.app";
 
   return (
     <section id="activity" className="py-32 px-4">
@@ -55,7 +58,7 @@ const Activity = () => {
               {/* Stats Card */}
               <div className="group relative glass p-4 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20">
                 <img 
-                  src={`https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&title_color=facc15&text_color=ffffff&icon_color=facc15&bg_color=081a14&hide_border=true&rank_icon=github`} 
+                  src={`${githubStatsMirror}/api?username=${githubUsername}&show_icons=true&title_color=facc15&text_color=ffffff&icon_color=facc15&bg_color=081a14&hide_border=true&rank_icon=github`} 
                   alt="GitHub Stats"
                   className="w-full h-auto"
                 />
@@ -64,7 +67,7 @@ const Activity = () => {
               {/* Top Langs */}
               <div className="group relative glass p-4 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20">
                 <img 
-                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${githubUsername}&layout=compact&title_color=facc15&text_color=ffffff&icon_color=facc15&bg_color=081a14&hide_border=true`} 
+                  src={`${githubStatsMirror}/api/top-langs/?username=${githubUsername}&layout=compact&title_color=facc15&text_color=ffffff&icon_color=facc15&bg_color=081a14&hide_border=true`} 
                   alt="Top Languages"
                   className="w-full h-auto"
                 />
@@ -72,7 +75,7 @@ const Activity = () => {
             </div>
           </motion.div>
 
-          {/* LeetCode & GFG Section */}
+          {/* Competitive Programming Section */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -107,27 +110,13 @@ const Activity = () => {
               <div className="group relative glass p-6 rounded-[2.5rem] border border-white/5 overflow-hidden transition-all hover:border-primary/20">
                 <div className="flex items-center gap-3 mb-4">
                    <Layout size={16} className="text-primary" />
-                   <span className="text-[10px] font-black uppercase tracking-widest text-white/40">GeeksforGeeks Profile</span>
+                   <span className="text-[10px] font-black uppercase tracking-widest text-white/40">GeeksforGeeks Stats</span>
                 </div>
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                   <img 
-                     src={`https://gfg-stats.vercel.app/api?username=${gfgUsername}&theme=dark`} 
-                     alt="GFG Stats"
-                     className="w-full md:w-2/3 h-auto rounded-xl"
-                   />
-                   <div className="flex flex-col gap-4 text-center md:text-left">
-                      <div className="text-primary font-bold text-xl">800+ Solved</div>
-                      <p className="text-white/40 text-xs leading-relaxed">Extensive practice on DSA, Algorithms, and System Design problems.</p>
-                      <a 
-                        href={`https://www.geeksforgeeks.org/profile/${gfgUsername}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[10px] font-black uppercase tracking-widest text-white hover:text-primary transition-colors"
-                      >
-                         View Profile →
-                      </a>
-                   </div>
-                </div>
+                <img 
+                  src={`https://gfgstatscard.vercel.app/${gfgUsername}`} 
+                  alt="GFG Stats"
+                  className="w-full h-auto rounded-xl"
+                />
               </div>
             </div>
           </motion.div>
