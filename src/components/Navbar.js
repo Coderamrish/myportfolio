@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Home, Briefcase, User, Mail, Layers, Star } from 'lucide-react';
+import { Home, Briefcase, User, Mail, Layers, Star, Activity as ActivityIcon } from 'lucide-react';
 import { playClick } from '../utils/sounds';
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      const sections = ['home', 'about', 'stack', 'achievements', 'projects', 'contact'];
+      const sections = ['home', 'about', 'stack', 'achievements', 'projects', 'activity', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -33,6 +33,7 @@ const Navbar = () => {
     { id: 'stack', icon: <Layers size={16} />, label: 'Tech' },
     { id: 'achievements', icon: <Star size={16} />, label: 'Wins' },
     { id: 'projects', icon: <Briefcase size={16} />, label: 'Work' },
+    { id: 'activity', icon: <ActivityIcon size={16} />, label: 'Stats' },
     { id: 'contact', icon: <Mail size={16} />, label: 'Connect' },
   ];
 

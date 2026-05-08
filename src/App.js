@@ -5,6 +5,7 @@ import About from './components/About';
 import TechStack from './components/TechStack';
 import Achievements from './components/Achievements';
 import Projects from './components/Projects';
+import Activity from './components/Activity';
 import Contact from './components/Contact';
 import { playClick } from './utils/sounds';
 
@@ -44,6 +45,7 @@ function App() {
         <TechStack />
         <Achievements />
         <Projects />
+        <Activity />
         <Contact />
       </main>
 
