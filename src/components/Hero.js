@@ -22,7 +22,7 @@ const Linkedin = ({ size = 24 }) => (
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden px-4">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[150px] -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-600/10 rounded-full blur-[150px] -z-10" />
 
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -36,7 +36,7 @@ const Hero = () => {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="absolute -top-4 px-6 py-2 bg-primary text-black font-black uppercase tracking-[0.2em] text-[10px] rounded-full shadow-lg shadow-primary/20 flex items-center gap-2"
+            className="absolute -top-4 px-6 py-2 bg-primary text-background font-black uppercase tracking-[0.2em] text-[10px] rounded-full shadow-lg shadow-primary/20 flex items-center gap-2"
           >
             <Sparkles size={12} />
             Full Stack & AI Engineer
@@ -48,13 +48,13 @@ const Hero = () => {
             transition={{ delay: 0.4 }}
             className="relative mb-8"
           >
-            <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full blur opacity-20 group-hover:opacity-40 animate-pulse"></div>
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary to-emerald-500 rounded-full blur opacity-20 group-hover:opacity-40 animate-pulse"></div>
             <img
               src="https://github.com/Coderamrish.png"
               alt={portfolioData.name}
-              className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white/5 bg-black z-10"
+              className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white/5 bg-surface z-10"
             />
-            <div className="absolute bottom-1 right-1 bg-primary text-black p-2 rounded-full shadow-xl z-20">
+            <div className="absolute bottom-1 right-1 bg-primary text-background p-2 rounded-full shadow-xl z-20">
                <ShieldCheck size={20} />
             </div>
           </motion.div>
@@ -127,7 +127,7 @@ const Hero = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               onClick={playClick}
-              className="px-8 py-4 bg-primary text-black font-black uppercase tracking-widest rounded-2xl hover:bg-white transition-all shadow-xl shadow-primary/20 hover:scale-105 active:scale-95"
+              className="px-8 py-4 bg-primary text-background font-black uppercase tracking-widest rounded-2xl hover:bg-white transition-all shadow-xl shadow-primary/20 hover:scale-105 active:scale-95"
             >
                Resume
             </a>

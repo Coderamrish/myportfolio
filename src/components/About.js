@@ -23,7 +23,7 @@ const About = () => {
           <h2 className="text-5xl md:text-7xl font-display font-bold mb-10 leading-tight">About <br /><span className="text-white/20 italic">Amrish.</span></h2>
           
           <div className="relative p-10 rounded-[3rem] bg-white/[0.02] border border-white/5 mb-10 group hover:border-primary/20 transition-all">
-             <div className="absolute -top-4 -left-4 p-4 bg-primary rounded-2xl text-black shadow-xl group-hover:scale-110 transition-transform">
+             <div className="absolute -top-4 -left-4 p-4 bg-primary rounded-2xl text-background shadow-xl group-hover:scale-110 transition-transform">
                 <Sparkles size={24} />
              </div>
              <p className="text-white/60 leading-relaxed text-xl font-light italic">
@@ -96,7 +96,7 @@ const About = () => {
                 >
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-[10px] font-bold text-primary uppercase tracking-[0.3em]">{paper.type}</span>
-                    <span className="text-[10px] font-bold text-green-400 uppercase tracking-[0.3em]">{paper.status}</span>
+                    <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-[0.3em]">{paper.status}</span>
                   </div>
                   <h4 className="text-lg font-bold text-white group-hover:text-primary transition-colors mb-2">{paper.title}</h4>
                   <div className="flex items-center gap-2 text-white/30 text-xs font-bold uppercase tracking-widest group-hover:text-white/60 transition-colors">

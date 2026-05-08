@@ -81,10 +81,10 @@ const Contact = () => {
                   <h4 className="text-2xl font-bold mb-4">Remote / Hybrid</h4>
                   <p className="text-white/40 text-sm mb-8 font-light">Based in Kolkata, India. Open to global opportunities in distributed systems and AI platforms.</p>
                   <div className="flex gap-4">
-                     <a href={portfolioData.socials.linkedin} target="_blank" rel="noopener noreferrer" className="p-4 bg-black rounded-2xl hover:bg-white hover:text-black transition-all">
+                     <a href={portfolioData.socials.linkedin} target="_blank" rel="noopener noreferrer" className="p-4 bg-background rounded-2xl hover:bg-white hover:text-background transition-all">
                         <LinkedinIcon size={20} />
                      </a>
-                     <a href={portfolioData.socials.github} target="_blank" rel="noopener noreferrer" className="p-4 bg-black rounded-2xl hover:bg-white hover:text-black transition-all">
+                     <a href={portfolioData.socials.github} target="_blank" rel="noopener noreferrer" className="p-4 bg-background rounded-2xl hover:bg-white hover:text-background transition-all">
                         <GithubIcon size={20} />
                      </a>
                   </div>
@@ -126,8 +126,8 @@ const Contact = () => {
                   className="w-full bg-white/5 border border-white/5 rounded-[2rem] px-8 py-6 focus:outline-none focus:border-primary/50 transition-all text-white placeholder:text-white/10 resize-none"
                 ></textarea>
               </div>
-              <button 
-                className="w-full bg-primary text-black font-black uppercase tracking-[0.2em] py-6 rounded-[2rem] hover:bg-white transition-all shadow-2xl shadow-primary/20 flex items-center justify-center gap-4 group"
+               <button 
+                className="w-full bg-primary text-background font-black uppercase tracking-[0.2em] py-6 rounded-[2rem] hover:bg-white transition-all shadow-2xl shadow-primary/20 flex items-center justify-center gap-4 group"
               >
                 Dispatch Message
                 <Send size={20} className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />

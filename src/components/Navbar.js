@@ -43,12 +43,12 @@ const Navbar = () => {
         animate={{ y: 0, opacity: 1 }}
         className={`p-1.5 rounded-full border flex items-center gap-1 transition-all duration-700 ${
           isScrolled 
-            ? 'bg-black/90 backdrop-blur-3xl border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]' 
+            ? 'bg-surface/90 backdrop-blur-3xl border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]' 
             : 'bg-white/[0.03] backdrop-blur-xl border-white/5'
         }`}
       >
         <div className="pl-4 pr-3 border-r border-white/10 mr-1 hidden md:block">
-           <div className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_10px_#3B82F6]" />
+           <div className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_10px_#facc15]" />
         </div>
 
         {navItems.map((item) => (
@@ -57,13 +57,13 @@ const Navbar = () => {
             href={`#${item.id}`}
             onClick={playClick}
             className={`relative px-4 py-2.5 rounded-full text-[9px] font-black uppercase tracking-[0.2em] transition-all duration-500 flex items-center gap-2 ${
-              activeSection === item.id ? 'text-black' : 'text-white/30 hover:text-white/80'
+              activeSection === item.id ? 'text-background' : 'text-white/30 hover:text-white/80'
             }`}
           >
             {activeSection === item.id && (
               <motion.div
                 layoutId="nav-active-pill"
-                className="absolute inset-0 bg-white rounded-full z-0 shadow-xl"
+                className="absolute inset-0 bg-primary rounded-full z-0 shadow-xl"
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
               />
             )}

@@ -33,8 +33,8 @@ function App() {
   return (
     <div className="relative min-h-screen bg-background selection:bg-primary/30 selection:text-white">
       {/* Background Glows */}
-      <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
-      <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/10 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
+      <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-600/10 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
+      <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
 
       <Navbar />
       

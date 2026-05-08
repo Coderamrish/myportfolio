@@ -8,21 +8,21 @@ const TechStack = () => {
   const stack = [
     {
       title: "Backend Core",
-      icon: <Server className="text-blue-400" />,
+      icon: <Server className="text-emerald-400" />,
       skills: portfolioData.skills.backend,
-      color: "blue"
+      color: "emerald"
     },
     {
       title: "GenAI & ML",
-      icon: <Cpu className="text-cyan-400" />,
+      icon: <Cpu className="text-primary" />,
       skills: portfolioData.skills.ai_ml,
-      color: "cyan"
+      color: "amber"
     },
     {
       title: "Data Systems",
-      icon: <DatabaseZap className="text-purple-400" />,
+      icon: <DatabaseZap className="text-emerald-300" />,
       skills: portfolioData.skills.databases,
-      color: "purple",
+      color: "emerald-light",
       featured: true
     },
     {
@@ -102,7 +102,7 @@ const TechStack = () => {
                   onClick={playClick}
                   className="flex flex-col items-center gap-6 group/lang cursor-pointer"
                 >
-                  <div className="w-20 h-20 rounded-[2rem] glass border border-white/10 flex items-center justify-center text-3xl font-black text-white/20 group-hover/lang:text-primary group-hover/lang:border-primary/40 group-hover/lang:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-500">
+                  <div className="w-20 h-20 rounded-[2rem] glass border border-white/10 flex items-center justify-center text-3xl font-black text-white/20 group-hover/lang:text-primary group-hover/lang:border-primary/40 group-hover/lang:shadow-[0_0_30px_rgba(250,204,21,0.3)] transition-all duration-500">
                     {lang[0]}
                   </div>
                   <span className="text-xs font-black text-white/20 group-hover/lang:text-white uppercase tracking-[0.3em] transition-colors">{lang}</span>

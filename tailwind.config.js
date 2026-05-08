@@ -7,8 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#3B82F6", // Professional Blue
-        background: "#000000",
+        primary: "#facc15", // Amber Gold
+        secondary: "#10b981", // Emerald
+        background: "#081a14", // Deep Emerald Dark
+        surface: "#112b20", // Slightly lighter emerald for cards
       },
       fontFamily: {
         display: ["Inter", "sans-serif"],

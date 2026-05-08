@@ -5,12 +5,12 @@ import { portfolioData } from '../data/portfolioData';
 import { playClick, playWhoosh } from '../utils/sounds';
 
 const iconMap = {
-  "Award": <Award className="text-yellow-400" />,
-  "Trophy": <Trophy className="text-purple-400" />,
-  "Code": <Code className="text-blue-400" />,
-  "Star": <Star className="text-orange-400" />,
-  "Zap": <Zap className="text-cyan-400" />,
-  "Target": <Target className="text-red-400" />,
+  "Award": <Award className="text-primary" />,
+  "Trophy": <Trophy className="text-emerald-400" />,
+  "Code": <Code className="text-emerald-300" />,
+  "Star": <Star className="text-primary" />,
+  "Zap": <Zap className="text-emerald-500" />,
+  "Target": <Target className="text-primary" />,
 };
 
 const Achievements = () => {

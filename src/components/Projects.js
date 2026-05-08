@@ -44,11 +44,11 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover grayscale-[50%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80" />
                 
                 <div className="absolute top-6 left-6 flex flex-wrap gap-2">
                   {project.tags.map((tag, tIndex) => (
-                    <span key={tIndex} className="text-[9px] font-black uppercase tracking-widest text-white bg-black/60 backdrop-blur-xl border border-white/10 px-3 py-1.5 rounded-xl shadow-2xl">
+                    <span key={tIndex} className="text-[9px] font-black uppercase tracking-widest text-white bg-surface/60 backdrop-blur-xl border border-white/10 px-3 py-1.5 rounded-xl shadow-2xl">
                       {tag}
                     </span>
                   ))}
