@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Activity as ActivityIcon, Calendar, Zap, Layout } from 'lucide-react';
-import { portfolioData } from '../data/portfolioData';
-import { playClick, playWhoosh } from '../utils/sounds';
+import { Trophy, Activity as ActivityIcon, Layout } from 'lucide-react';
+import { playWhoosh } from '../utils/sounds';
 
 const GithubIcon = ({ size = 24 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
